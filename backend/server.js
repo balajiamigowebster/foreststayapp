@@ -5,8 +5,13 @@ require('dotenv').config();
 // Initialize App
 const app = express();
 
-// Middleware
+// Middleware (Custom CORS resolver and Path re-router to bypass Passenger BaseURI conflicts)
 app.use((req, res, next) => {
+  // Strip BaseURI if passed by Passenger
+  if (req.url.startsWith('/foreststayapp')) {
+    req.url = req.url.substring('/foreststayapp'.length);
+  }
+
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
