@@ -824,9 +824,23 @@ footer {
   .mode-switch-text {
     display: none !important;
   }
+  
+  /* Stacking all grids with hardcoded columns on mobile, excluding calendar repeating 7 columns */
+  div[style*="grid-template-columns"]:not([style*="repeat(7"]):not([style*="repeat( 7"]),
+  div[style*="gridTemplateColumns"]:not([style*="repeat(7"]):not([style*="repeat( 7"]),
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  /* Control deck columns stacking */
   .control-deck-wrapper {
     grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
+  
+  /* Staff roster card layout stacking */
   .staff-card-grid {
     grid-template-columns: 1fr !important;
     gap: 15px !important;
@@ -835,10 +849,35 @@ footer {
     align-items: flex-start !important;
     text-align: left !important;
   }
+  
+  /* Operations dashboard layout stacking */
   .operations-desk {
     flex-direction: column !important;
   }
   .ops-card {
     width: 100% !important;
+  }
+
+  /* Portal hub cards (make them fit in 2 columns on small screens) */
+  .backoffice-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+    gap: 12px !important;
+    padding: 0 10px !important;
+  }
+
+  /* AI drawer width adjustments to prevent overflow */
+  .ai-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Modal boxes width limits */
+  .modal-content {
+    width: 95% !important;
+    max-height: 90vh !important;
+    margin: 10px !important;
+  }
+  .modal-body {
+    padding: 15px !important;
   }
 }
