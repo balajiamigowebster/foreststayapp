@@ -880,4 +880,17 @@ footer {
   .modal-body {
     padding: 15px !important;
   }
+
+  /* Cafe POS specific mobile styling overrides */
+  .cafe-pos-layout .glass-panel {
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+  .cafe-pos-layout h3 {
+    font-size: 1.15rem !important;
+  }
+  .cafe-pos-layout input,
+  .cafe-pos-layout button {
+    font-size: 0.8rem !important;
+  }
 }

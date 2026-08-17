@@ -1721,7 +1721,7 @@ Total outstanding receivables: ₹2,800. Automated SMS alert dispatched.`;
                 </div>
 
                  {/* Menu items Grid - now spaced with auto-fit 320px columns */}
-                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px' }}>
+                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
                    {filteredMenuItems.map(item => (
                      <div key={item.id} style={{ border: '1px solid rgba(0,0,0,0.05)', borderRadius: '12px', padding: '16px', background: 'var(--cream-base)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', minHeight: '100px' }}>
                        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', width: '70%' }}>
@@ -2730,7 +2730,7 @@ Total outstanding receivables: ₹2,800. Automated SMS alert dispatched.`;
             </div>
 
             {/* Trek Grid Cards */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '25px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '25px' }}>
               {treksCatalog
                 .filter(t => {
                   const matchesSearch = t.title.toLowerCase().includes(searchTrekQuery.toLowerCase()) || 
@@ -3016,7 +3016,7 @@ Total outstanding receivables: ₹2,800. Automated SMS alert dispatched.`;
             </div>
 
             {/* Inventory Grid Cards */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '25px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '25px' }}>
               {inventoryList
                 .filter(i => {
                   const matchesSearch = i.name.toLowerCase().includes(searchInventoryQuery.toLowerCase());
